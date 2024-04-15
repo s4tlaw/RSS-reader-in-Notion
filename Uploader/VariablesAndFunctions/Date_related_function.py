@@ -1,4 +1,5 @@
 from datetime import datetime
+from environment import your_TIMEZONE, your_TIMEZONE_OFFSET
 
 def check_published_format(entry):
     format1 = "%a, %d %b %Y %H:%M:%S %z"
@@ -11,7 +12,7 @@ def check_published_format(entry):
     except ValueError:
         try:
             datetime.strptime(entry, format2)
-            entry_with_offset = entry.replace("GMT", "+0800")  # Adding the UTC offset manually
+            entry_with_offset = entry.replace(your_TIMEZONE, your_TIMEZONE_OFFSET)  # Adding the UTC offset manually
             return entry_with_offset
         except ValueError:
                 yt_entry=datetime.fromisoformat(entry)
