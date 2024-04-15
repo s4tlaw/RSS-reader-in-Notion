@@ -3,8 +3,8 @@ from VariablesAndFunctions.Date_related_function import *
 from VariablesAndFunctions.previous_excecute_time_store import *
 
 import requests
-NOTION_TOKEN = "secret_Jkfl865sWmUyjZFlnvX7uDcf06CKRHePhDpz5T290qL"
-DATABASE_ID = "1ee52bc8e84a44afae3ccee994ef1855"
+NOTION_TOKEN = "secret_Jk<yourtoken>L"
+DATABASE_ID = "1e5"
 headers = {
     "Authorization": "Bearer " + NOTION_TOKEN,  # Bearer token
     "Content-Type": "application/json",  # Define content type you post to URL. See more on json content type
